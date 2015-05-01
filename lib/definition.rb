@@ -10,8 +10,12 @@ class Definition
 
   end
 
-def save
-  @definition<<@@definitions
-end
+  def add_definition definition
+
+
+  end
+  def save
+    @@definitions<<self
+  end
 
 end
