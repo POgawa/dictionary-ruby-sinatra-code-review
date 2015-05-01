@@ -2,11 +2,10 @@ class Word
 
   @@words =[]
 
-  attr_reader(:name, :definition)
+  attr_reader(:name, :definitions, :id)
 
-  def initialize name
-    @name = name
-    @definition = definition
+  def initialize attributes
+    @name = attributes[:name]
     @definitions = []
     @id = @@words.length + 1
 
@@ -28,4 +27,8 @@ class Word
   def self.clear
     @@words = []
   end
+
+
+
+
 end

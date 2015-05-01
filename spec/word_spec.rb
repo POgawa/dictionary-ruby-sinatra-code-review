@@ -7,16 +7,16 @@ require "definition"
 describe(Word) do
   describe'#initialize' do
     it'initializes the word object with a name' do
-      test_word = Word.new'computer'
-      expect(test_word.name).to eq'computer'
+      test_word = Word.new({name:'word'})
+      expect(test_word.name).to eq'word'
     end
   end
 
   describe('#all') do
     it('returns all the words') do
-      test_word1 = Word.new('this is the word')
+      test_word1 = Word.new({name:'word'})
       test_word1.save
-      test_word2 = Word.new('this is the other word')
+      test_word2 = Word.new({name:'other word'})
       test_word2.save
       expect(Word.all.length).to(eq(2))
     end
@@ -24,7 +24,7 @@ describe(Word) do
 
    describe('#clear') do
     it('clears the words array') do
-      test_word = Word.new('this is the word')
+      test_word = Word.new({name:'word'})
       words = Word.all
       test_word.save
       expect(words.clear).to(eq([]))
@@ -33,7 +33,7 @@ describe(Word) do
 
   describe("#save") do
     it('saves the word to the words array') do
-      test_word = Word.new('this is theword')
+      test_word = Word.new({name:'word'})
       test_word.save
       words = Word.all
       expect(words.length).to(eq(1))
@@ -41,7 +41,14 @@ describe(Word) do
     end
   end
 
-
+  describe('#add definition') do
+    it('adds a definition to the word object') do
+      test_word = Word.new({name:'word'})
+      test_definition = Definition.new({definition:'this is a word'})
+      test_word.add_definition(test_definition)
+      expect(test_word.definitions.()).to(eq([test_definition]))
+    end
+  end
 
 
 

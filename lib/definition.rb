@@ -4,14 +4,14 @@ class Definition
 
   attr_reader(:definition, :id)
 
-  define_method(:initialize) do |definition|
-    @definition = definition
+  def initialize attributes
+    @definition = attributes[:definition]
     @id = @@definitions.length + 1
 
   end
 
   def add_definition definition
-
+    @@definitions<<definition
   end
 
 
