@@ -27,4 +27,7 @@ class Definition
     @@definitions = []
 
   end
+
+
+  
 end

@@ -28,7 +28,13 @@ class Word
     @@words = []
   end
 
-
+  def self.find identification
+    @@words.each do |word|
+      if word.id == identification
+        return word
+      end
+    end
+  end
 
 
 end

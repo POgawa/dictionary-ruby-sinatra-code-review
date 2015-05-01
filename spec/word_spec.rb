@@ -5,6 +5,12 @@ require "definition"
 
 
 describe(Word) do
+
+  before() do
+    Word.clear()
+ end
+
+
   describe'#initialize' do
     it'initializes the word object with a name' do
       test_word = Word.new({name:'word'})
@@ -51,6 +57,12 @@ describe(Word) do
   end
 
 
-
+  describe('self#find') do
+    it('finds the word by id') do
+      test_word = Word.new({name:'word'})
+      test_word.save
+      expect(test_word.find(1)).to(eq(1))
+    end
+  end
 
 end
