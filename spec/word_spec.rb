@@ -46,7 +46,7 @@ describe(Word) do
       test_word = Word.new({name:'word'})
       test_definition = Definition.new({definition:'this is a word'})
       test_word.add_definition(test_definition)
-      expect(test_word.definitions.()).to(eq([test_definition]))
+      expect(test_word.definitions()).to(eq([test_definition]))
     end
   end
 
