@@ -23,7 +23,6 @@ class Definition
     @@definitions
   end
 
-
   def self.clear
     @@definitions = []
 
