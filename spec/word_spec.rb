@@ -13,7 +13,7 @@ describe(Word) do
   end
 
   describe('#all') do
-    it('returns all teh words') do
+    it('returns all the words') do
       test_word1 = Word.new('this is the word')
       test_word1.save
       test_word2 = Word.new('this is the other word')
