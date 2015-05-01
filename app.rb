@@ -8,5 +8,24 @@ require "./lib/definition.rb"
 
 
 get('/') do
-   erb(:index)
- end
+
+  @words=Word.all
+
+  erb(:index)
+end
+
+
+
+get '/addword' do
+
+  erb(:add_word)
+end
+
+
+post 'addword' do
+  @name = params.fetch('word')
+  @definition = params.fetch('definition')
+  @word = Word.new({name: @name, definition: @definition})
+  @word.save
+  erb :results
+end
