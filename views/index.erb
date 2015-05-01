@@ -1,15 +1,13 @@
-<h1>Dictionary Ogawa</h1>
-<% if @words.length != 0 %>
-  <h2>Current words: </h2>
+  <h1>Dictionary Ogawa</h1>
 
-  <ul>
-    <% @words.each do |word|%>
-    <li><%word.name%></li>
-  </ul>
 
-  <% end %>
-<%else%>
-  <h1>You have not entered any words!!</h1>
-  <h2>Please enter a word by clicking below</h2>
-    <a href="/addword">Add word</a>
-<%end%>
+    <h2>Current words: </h2>
+      <ul>
+      <% @words.each do |word|%>
+        <li><a href="/word/<%= word.id %>"><%= word.name%></a></li>
+      <% end %>
+      </ul>
+
+  <br>
+
+  <a class='footer' href="/addword">Add word</a>

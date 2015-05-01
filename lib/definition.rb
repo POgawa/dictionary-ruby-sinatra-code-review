@@ -29,5 +29,5 @@ class Definition
   end
 
 
-  
+
 end

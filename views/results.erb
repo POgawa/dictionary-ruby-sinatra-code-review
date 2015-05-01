@@ -1,1 +1,12 @@
-<h1>hello world</h1>
+<% if @word == nil %>
+  <h1>Your have no words!!</h1>
+  <h2>Please add a word</h2>
+  <a href="/addword"></a>
+<%else%>
+  <h1>You have successfully added the word:</h1>
+
+  <h2>"<%= @word.name %>"</h2>
+<%end%>
+
+
+<a href="/">Return to homepage</a>
