@@ -1,4 +1,5 @@
-require "{insert the name of the model.rb here}"
+require "word"
+require "definition"
 require('capybara/rspec')
 require('./app')
 Capybara.app = Sinatra::Application

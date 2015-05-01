@@ -1,7 +1,8 @@
 require ("sinatra")
-require ('sinatra/reloader')
-require('./lib/##################')
-also_reload('lib/**/*.rb')
+require ('rerun')
+require('./lib/word.rb')
+require "./lib/definition.rb"
+
 
 
 
