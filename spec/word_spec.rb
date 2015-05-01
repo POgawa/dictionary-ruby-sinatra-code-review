@@ -56,13 +56,4 @@ describe(Word) do
     end
   end
 
-
-  describe('self#find') do
-    it('finds the word by id') do
-      test_word = Word.new({name:'word'})
-      test_word.save
-      expect(test_word.find(1)).to(eq(1))
-    end
-  end
-
 end
